@@ -1,0 +1,56 @@
+<!-- start Simple Custom CSS and JS -->
+<style type="text/css">
+//testimonial
+/* .testimonial-carousel-wrapper {
+    position: relative;
+} */
+.testimonial-carousel .testimonial-item {
+	padding: 40px;
+	border: 1px solid #FFFFFF1F;
+	border-radius: 16px;
+}
+/* .testimonial-carousel-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+}
+.testimonial-carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+	display: flex;
+    justify-content: space-between;
+    z-index: 1;
+	margin: 0 10px;
+} */
+.testimonial-rating i.fa.fa-star {
+    margin-right: 5px;
+}
+.testimonial-rating, .testimonial-feedback, .testimonial-carousel-nav {
+    text-align: center;
+}
+.testimonial-carousel-prev,
+.testimonial-carousel-next {
+    background: #FFFFFF;
+	border: 1px solid #FFFFFF;
+	border-radius: 100%;
+    cursor: pointer;
+    font-size: 6.5px;
+    padding: 2px;
+    color: #575757;
+	margin: 5px;
+}
+
+/* .testimonial-carousel-prev {
+    position: absolute;
+    left: 0;
+} */
+
+/* .testimonial-carousel-next {
+    position: absolute;
+    right: 0;
+} */</style>
+<!-- end Simple Custom CSS and JS -->
