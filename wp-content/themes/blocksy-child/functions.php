@@ -93,3 +93,42 @@ function testimonial_carousel_shortcode() {
     return ob_get_clean();
 }
 add_shortcode('testimonial_carousel', 'testimonial_carousel_shortcode');
+
+//blogs shortcode
+
+function blogs_archive_shortcode() {
+    ob_start();
+          $args = array(
+            'post_type' => 'post',
+            'post_status' => 'publish',
+            'posts_per_page' => 3,
+            'order' => 'DESC',
+        );
+        $query = new WP_Query($args);
+
+        if ($query->have_posts()) : ?>
+            <?php while ($query->have_posts()) : $query->the_post(); 
+            ?>
+            <div class="services">
+                <img src="<?php echo get_field('image'); ?>" alt="image">
+                <div class="category">
+                    <?php
+                        $categories = get_the_category();
+                        foreach ($categories as $category) {
+                            echo '<span>' . $category->name . '</span>';
+                        }
+                    ?>
+                </div>
+                <h5><?php the_title(); ?></h5>
+                <p> <?php echo get_field('description'); ?></p>
+                <a>Read More</a>
+            </div>
+            <?php endwhile; ?>
+            <?php
+        wp_reset_postdata();
+    else :
+        echo '<p>No posts found</p>';
+    endif;
+    return ob_get_clean();
+}
+add_shortcode('custom_blogs', 'blogs_archive_shortcode');

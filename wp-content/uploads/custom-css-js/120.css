@@ -1,31 +1,11 @@
 <!-- start Simple Custom CSS and JS -->
 <style type="text/css">
 //testimonial
-/* .testimonial-carousel-wrapper {
-    position: relative;
-} */
 .testimonial-carousel .testimonial-item {
 	padding: 40px;
 	border: 1px solid #FFFFFF1F;
 	border-radius: 16px;
 }
-/* .testimonial-carousel-prev {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: space-between;
-    z-index: 1;
-}
-.testimonial-carousel-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-	display: flex;
-    justify-content: space-between;
-    z-index: 1;
-	margin: 0 10px;
-} */
 .testimonial-rating i.fa.fa-star {
     margin-right: 5px;
 }
@@ -43,14 +23,14 @@
     color: #575757;
 	margin: 5px;
 }
-
-/* .testimonial-carousel-prev {
-    position: absolute;
-    left: 0;
-} */
-
-/* .testimonial-carousel-next {
-    position: absolute;
-    right: 0;
-} */</style>
+.services-wrapper, .elementor-shortcode {
+	display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.services {
+	padding: 10px;
+}
+.services a {
+	text-decoration: underline;
+}</style>
 <!-- end Simple Custom CSS and JS -->
