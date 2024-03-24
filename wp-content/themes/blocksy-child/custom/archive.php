@@ -38,8 +38,6 @@ if (! have_posts()) {
 
 ?>
 
-<div class="<?php echo $container_class ?>" <?php echo wp_kses_post(blocksy_sidebar_position_attr()); ?> <?php echo blocksy_get_v_spacing() ?>>
-	<section <?php echo $section_class ?> class="services-wrapper">
 		<?php
           $args = array(
             'post_status' => 'publish',
@@ -50,6 +48,7 @@ if (! have_posts()) {
             <?php while ($query->have_posts()) : $query->the_post(); 
             ?>
             <div class="services">
+            <div class="top">
                 <img src="<?php echo get_field('image'); ?>" alt="image">
                 <div class="category">
                     <?php
@@ -59,8 +58,9 @@ if (! have_posts()) {
                         }
                     ?>
                 </div>
+                </div>
                 <h5><?php the_title(); ?></h5>
-                <p> <?php echo get_field('description'); ?></p>
+                <?php echo get_field('description'); ?>
                 <a>Read More</a>
             </div>
             <?php endwhile; ?>
@@ -70,7 +70,5 @@ if (! have_posts()) {
         echo '<p>No posts found</p>';
     endif;
     ?>
-	</section>
 
 	<?php get_sidebar(); ?>
-</div>

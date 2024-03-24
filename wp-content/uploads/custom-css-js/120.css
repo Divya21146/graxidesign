@@ -59,8 +59,15 @@
 a.elementor-button.elementor-button-link.elementor-size-sm {
     background: linear-gradient(to top, #4B0082 0%, #8A2BE2 50%, #E6E6FA 120%);
 }
+.header-menu-2 li a {
+	height: auto !important;
+    padding: 10px 20px !important;
+    border-radius: 260px;
+    background: linear-gradient(to top, #4B0082 0%, #8A2BE2 50%, #E6E6FA 120%);
+}
 .careers button {
-	background: linear-gradient(to right, #B32DFD, #4B6BE0);
+/* 	background: linear-gradient(to right, #B32DFD, #4B6BE0); */
+	background: linear-gradient(to top, #4B0082 0%, #8A2BE2 50%, #E6E6FA 120%);
 	padding: 5px;
     border-radius: 50px;
     width: 100%;
@@ -81,7 +88,11 @@ a.elementor-button.elementor-button-link.elementor-size-sm {
 .sec3 .elementor-inner-section, .sec6 .elementor-inner-section, .sec7 .elementor-inner-section {
 	margin-bottom: 20px;
 }
-.services {
+.insight .services {
+	background-color: #452C6833;
+    border-radius: 20px;
+}
+.blogs-shortcode .services {
 	background-color: #090212;
     border-radius: 20px;
 }
@@ -134,5 +145,8 @@ a.elementor-button.elementor-button-link.elementor-size-sm {
 }
 i.fa.fa-star {
     margin: 0 5px;
+}
+.menu-item a {
+	text-transform: unset !important;
 }</style>
 <!-- end Simple Custom CSS and JS -->

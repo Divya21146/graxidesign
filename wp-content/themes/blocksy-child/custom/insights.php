@@ -38,9 +38,7 @@ if (! have_posts()) {
 
 ?>
 
-<div class="<?php echo $container_class ?>" <?php echo wp_kses_post(blocksy_sidebar_position_attr()); ?> <?php echo blocksy_get_v_spacing() ?>>
-	<section <?php echo $section_class ?> class="insight-wrapper">
-    <?php
+<?php
 	//services loop
           $args = array(
             'post_type' => 'insight',
@@ -53,9 +51,11 @@ if (! have_posts()) {
             ?>
             <div class="services">
                 <img src="<?php echo get_field('image'); ?>" alt="image">
+                <div class="content">
                 <h5><?php the_title(); ?></h5>
                 <p> <?php echo get_field('description'); ?></p>
                 <a>View Details</a>
+        </div>
             </div>
             <?php endwhile; ?>
             <?php
@@ -64,7 +64,5 @@ if (! have_posts()) {
         echo '<p>No posts found</p>';
     endif;
     ?>
-    </section>
 
 	<?php get_sidebar(); ?>
-</div>

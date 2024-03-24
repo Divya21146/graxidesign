@@ -37,10 +37,7 @@ if (! have_posts()) {
 }
 
 ?>
-
-<div class="<?php echo $container_class ?>" <?php echo wp_kses_post(blocksy_sidebar_position_attr()); ?> <?php echo blocksy_get_v_spacing() ?>>
-	<section <?php echo $section_class ?> class="career-wrapper">
-    <?php
+<?php
 	//services loop
           $args = array(
             'post_type' => 'career',
@@ -62,7 +59,5 @@ if (! have_posts()) {
         echo '<p>No posts found</p>';
     endif;
     ?>
-    </section>
 
 	<?php get_sidebar(); ?>
-</div>
