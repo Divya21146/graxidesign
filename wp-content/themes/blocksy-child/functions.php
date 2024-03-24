@@ -106,6 +106,7 @@ function blogs_archive_shortcode() {
 }
 add_shortcode('custom_blogs', 'blogs_archive_shortcode');
 
+//page insights
 function insights_shortcode() {
     ob_start();
     get_template_part('custom/insights');
@@ -113,12 +114,72 @@ function insights_shortcode() {
 }
 add_shortcode('custom_insights', 'insights_shortcode');
 
+//section insight 
+function section_insight() {
+    ob_start();
+	//services loop
+          $args = array(
+            'post_type' => 'insight',
+            'posts_per_page' => 4,
+            'post_status' => 'publish',
+        );
+        $query = new WP_Query($args);
+
+        if ($query->have_posts()) : ?>
+            <?php while ($query->have_posts()) : $query->the_post(); 
+            ?>
+            <div class="services">
+                <img src="<?php echo get_field('image'); ?>" alt="image">
+                <h5><?php the_title(); ?></h5>
+                <p> <?php echo get_field('description'); ?></p>
+                <a>View Details</a>
+            </div>
+            <?php endwhile; ?>
+            <?php
+        wp_reset_postdata();
+    else :
+        echo '<p>No posts found</p>';
+    endif;
+    return ob_get_clean();
+}
+add_shortcode('section_insight', 'section_insight');
+
+//full page career
 function career_shortcode() {
     ob_start();
     get_template_part('custom/career');
     return ob_get_clean();
 }
 add_shortcode('custom_career', 'career_shortcode');
+
+//section career
+function section_career() {
+    ob_start();
+    //services loop
+    $args = array(
+        'post_type' => 'career',
+        'posts_per_page' => 4,
+        'post_status' => 'publish',
+    );
+    $query = new WP_Query($args);
+
+    if ($query->have_posts()) : ?>
+        <?php while ($query->have_posts()) : $query->the_post(); 
+        ?>
+        <div class="careers">
+            <h5><?php the_title(); ?></h5>
+            <p> <?php the_content(); ?></p>
+            <button><a href="#">View Details</a></button>
+        </div>
+        <?php endwhile; ?>
+        <?php
+    wp_reset_postdata();
+else :
+    echo '<p>No posts found</p>';
+endif;
+    return ob_get_clean();
+}
+add_shortcode('section_career', 'section_career');
 
 function archive_shortcode() {
     ob_start();

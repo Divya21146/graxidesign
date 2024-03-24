@@ -36,5 +36,18 @@
 /* .insight-wrapper {
 	display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-} */</style>
+} */
+.sub-title p {
+    display: inline-block;
+    background: linear-gradient(to right, #4B0082, #8A2BE2, #E6E6FA);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.main-sec1 .sub-title .elementor-widget-container, .countdown-sec .sub-title .elementor-widget-container, .testimonial .sub-title .elementor-widget-container {
+	text-align: center;
+}
+a.elementor-button.elementor-button-link.elementor-size-sm {
+    background: linear-gradient(to top, #4B0082 0%, #8A2BE2 50%, #E6E6FA 120%);
+}</style>
 <!-- end Simple Custom CSS and JS -->
