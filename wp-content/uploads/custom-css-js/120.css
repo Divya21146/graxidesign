@@ -23,14 +23,18 @@
     color: #575757;
 	margin: 5px;
 }
-.services-wrapper, .elementor-shortcode {
+/* .services-wrapper, .elementor-shortcode {
 	display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-}
+} */
 .services {
 	padding: 10px;
 }
 .services a {
 	text-decoration: underline;
-}</style>
+}
+/* .insight-wrapper {
+	display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+} */</style>
 <!-- end Simple Custom CSS and JS -->
