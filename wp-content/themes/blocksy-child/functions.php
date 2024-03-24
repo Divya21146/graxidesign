@@ -17,7 +17,10 @@ function testimonial_carousel_shortcode() {
     ?>
     <div class="testimonial-carousel-wrapper">
         <div class="testimonial-carousel">
-            <?php while ($testimonials->have_posts()) : $testimonials->the_post(); ?>
+            <div class="testimonial-row"> <!-- Added a row container -->
+            <?php 
+            $count = 0; // Initialize a counter
+            while ($testimonials->have_posts()) : $testimonials->the_post(); ?>
                 <div class="testimonial-item"> 
                     <div class="testimonial-rating">
                         <?php 
@@ -33,7 +36,12 @@ function testimonial_carousel_shortcode() {
                     </div>
                     <div class="testimonial-feedback"><?php the_field('feedback'); ?></div>
                 </div>
+                <?php 
+                $count++; // Increment the counter
+                if ($count % 4 == 0) echo '</div><div class="testimonial-row">'; // Close and reopen row div after every 4 testimonials
+                ?>
             <?php endwhile; ?>
+            </div> <!-- Close the row container -->
         </div>
         <div class="testimonial-carousel-nav">
             <button class="testimonial-carousel-prev" onclick="moveTestimonialCarousel(-1)"></button>
@@ -46,16 +54,21 @@ function testimonial_carousel_shortcode() {
         showTestimonials(testimonialIndex);
 
         function showTestimonials(index) {
-            if (index >= testimonials.length) {testimonialIndex = 0;}
-            if (index < 0) {testimonialIndex = testimonials.length - 1;}
             for (var i = 0; i < testimonials.length; i++) {
                 testimonials[i].style.display = "none";
             }
-            testimonials[testimonialIndex].style.display = "block";
+            for (var i = index; i < index + 4; i++) {
+                if (testimonials[i]) {
+                    testimonials[i].style.display = "block";
+                }
+            }
         }
 
         function moveTestimonialCarousel(direction) {
-            showTestimonials(testimonialIndex += direction);
+            testimonialIndex += direction * 4; // Increment/decrement by 4 to show the next/previous set of testimonials
+            if (testimonialIndex >= testimonials.length) testimonialIndex = 0;
+            if (testimonialIndex < 0) testimonialIndex = testimonials.length - (testimonials.length % 4);
+            showTestimonials(testimonialIndex);
         }
     </script>
     <?php
@@ -83,6 +96,7 @@ function blogs_archive_shortcode() {
             <?php while ($query->have_posts()) : $query->the_post(); 
             ?>
             <div class="services">
+                <div class="top">
                 <img src="<?php echo get_field('image'); ?>" alt="image">
                 <div class="category">
                     <?php
@@ -92,8 +106,9 @@ function blogs_archive_shortcode() {
                         }
                     ?>
                 </div>
+                </div>
                 <h5><?php the_title(); ?></h5>
-                <p> <?php echo get_field('description'); ?></p>
+                <?php echo get_field('description'); ?>
                 <a>Read More</a>
             </div>
             <?php endwhile; ?>
@@ -130,9 +145,10 @@ function section_insight() {
             ?>
             <div class="services">
                 <img src="<?php echo get_field('image'); ?>" alt="image">
+                <div class="content">
                 <h5><?php the_title(); ?></h5>
-                <p> <?php echo get_field('description'); ?></p>
-                <a>View Details</a>
+                <?php echo get_field('description'); ?>
+        </div>
             </div>
             <?php endwhile; ?>
             <?php

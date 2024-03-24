@@ -1,42 +1,51 @@
 <!-- start Simple Custom CSS and JS -->
 <style type="text/css">
-//testimonial
-.testimonial-carousel .testimonial-item {
-	padding: 40px;
-	border: 1px solid #FFFFFF1F;
-	border-radius: 16px;
-}
-.testimonial-rating i.fa.fa-star {
-    margin-right: 5px;
-}
-.testimonial-rating, .testimonial-feedback, .testimonial-carousel-nav {
-    text-align: center;
-}
-.testimonial-carousel-prev,
-.testimonial-carousel-next {
-    background: #FFFFFF;
-	border: 1px solid #FFFFFF;
-	border-radius: 100%;
-    cursor: pointer;
-    font-size: 6.5px;
-    padding: 2px;
-    color: #575757;
-	margin: 5px;
-}
-/* .services-wrapper, .elementor-shortcode {
-	display: grid;
+.blogs-shortcode div.elementor-shortcode {
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-} */
-.services {
+	gap: 25px;
+}
+.blogs-shortcode div.elementor-shortcode img {
+	width: 100%;
+    height: 400px;
+}
+.top {
+	position: relative;
+}
+.top .category {
+	position: absolute;
+    bottom: 0;
+    background-color: #090212;
+    border-radius: 0 20px 0 0;
+    padding: 5px 20px;
+}
+.top .category span {
+	font-size: 13px;
+    font-weight: 300;
+}
+/* .services {
 	padding: 10px;
+} */
+.testimonial-carousel-prev, .testimonial-carousel-next {
+	padding: 5px;
+	margin: 5px;
+    border-radius: 100%;
+}
+.testimonial-carousel-nav {
+	text-align: center;
 }
 .services a {
-	text-decoration: underline;
+	border-bottom: 1px solid #fff;
+    cursor: pointer;
 }
-/* .insight-wrapper {
+.services a:hover {
+	border-color: #A8A8BD;
+}
+.insight .elementor-shortcode, .testimonial-row, .career-shortcode .elementor-shortcode {
 	display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-} */
+	gap: 20px;
+}
 .sub-title p {
     display: inline-block;
     background: linear-gradient(to right, #4B0082, #8A2BE2, #E6E6FA);
@@ -49,5 +58,81 @@
 }
 a.elementor-button.elementor-button-link.elementor-size-sm {
     background: linear-gradient(to top, #4B0082 0%, #8A2BE2 50%, #E6E6FA 120%);
+}
+.careers button {
+	background: linear-gradient(to right, #B32DFD, #4B6BE0);
+	padding: 5px;
+    border-radius: 50px;
+    width: 100%;
+    text-align: center;
+}
+.countdown .elementor-container, .sec4 .elementor-widget-wrap, .sec4 .elementor-container {
+	gap: 20px;
+}
+.countdown .elementor-widget-wrap {
+	padding: 30px !important;
+}
+.countdown .count {
+	margin-bottom: 0;
+}
+.sec3 .elementor-inner-section .elementor-widget-wrap, .sec6 .elementor-inner-section .elementor-widget-wrap, .sec7 .elementor-inner-section .elementor-widget-wrap {
+	padding: 0;
+}
+.sec3 .elementor-inner-section, .sec6 .elementor-inner-section, .sec7 .elementor-inner-section {
+	margin-bottom: 20px;
+}
+.services {
+	background-color: #090212;
+    border-radius: 20px;
+}
+.services .content, .col1-row2 {
+    padding: 30px;
+}
+.sec3 .services img {
+	border-radius: 10px;
+}
+.col1-row1 img {
+	width: -webkit-fill-available;
+}
+.col2-row1 .elementor-icon-box-wrapper, .col2-row2 .elementor-icon-box-wrapper {
+	display: flex !important;
+	align-items: center;
+}
+.col2-row1 .elementor-icon-box-wrapper .elementor-icon-box-icon, .col2-row2 .elementor-icon-box-wrapper .elementor-icon-box-icon, .col2-row1 .elementor-icon-box-wrapper .elementor-icon-box-title, .col2-row2 .elementor-icon-box-wrapper .elementor-icon-box-title {
+	margin-bottom: 0 !important;
+}
+.col2-row1 .elementor-icon-box-wrapper .elementor-icon-box-content, .col2-row2 .elementor-icon-box-wrapper .elementor-icon-box-content {
+	text-align: left;
+    margin-left: 20px;
+}
+.col2 .sub-title, .col2 .title, .col2 .desc {
+	margin-bottom: 0 !important;
+}
+.col2 .quote {
+	margin-bottom: 10px;
+}
+.sec4 .col2 {
+	margin-left: 20px;
+}
+.testimonial-item {
+	border: 1px solid #8773CB40;
+	border-radius: 20px;
+	padding: 30px;
+	text-align: center;
+}
+.careers {
+	border: 1px solid #8773CB40;
+	border-radius: 20px;
+	padding: 50px 30px 30px;
+	background-color: #452C6833;
+}
+.testimonial-carousel-nav {
+	padding: 20px 0;
+}
+.testimonial-rating {
+	padding-bottom: 20px;
+}
+i.fa.fa-star {
+    margin: 0 5px;
 }</style>
 <!-- end Simple Custom CSS and JS -->
