@@ -1,0 +1,31 @@
+<!-- start Simple Custom CSS and JS -->
+<style type="text/css">
+@media screen and (max-width: 1024px) {
+	.countdown .elementor-widget.elementor-widget-text-editor {
+		text-align: center;
+	}
+	.insight .elementor-shortcode, .testimonial-row, .career-shortcode .elementor-shortcode {
+		 grid-template-columns: 1fr 1fr !important;
+	 }
+	.sec4-sec1inner .elementor-container.elementor-column-gap-default {
+    	flex-wrap: nowrap;
+	}
+	.sec4-sec2 .elementor-container.elementor-column-gap-default {
+		display: grid;
+    	grid-template-columns: 1fr 1fr;
+	}
+	.elementor-shortcode #insight-container, .testimonial-row, .elementor-shortcode #career-container {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+	 .site-logo-container img, .site-logo-container svg, .site-logo-container picture {
+		 width: 65%;
+	 }
+	 main .ct-container-full {
+		 padding-top: 40px;
+		 padding-bottom: 40px;
+	 }
+}
+</style>
+<!-- end Simple Custom CSS and JS -->

@@ -1,5 +1,12 @@
 <!-- start Simple Custom CSS and JS -->
 <style type="text/css">
+footer.ct-footer .ct-container {
+    display: flex;
+    justify-content: space-between;
+}
+section.banner {
+	height: 70vh;
+}
 .blogs-shortcode div.elementor-shortcode {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -7,7 +14,7 @@
 }
 .blogs-shortcode div.elementor-shortcode img {
 	width: 100%;
-    height: 400px;
+    height: 50vh;
 }
 .top {
 	position: relative;
@@ -26,10 +33,13 @@
 /* .services {
 	padding: 10px;
 } */
-.testimonial-carousel-prev, .testimonial-carousel-next {
+button.testimonial-carousel-dot {
 	padding: 5px;
 	margin: 5px;
     border-radius: 100%;
+}
+button.testimonial-carousel-dot.active {
+    background-color: #4B0082;
 }
 .testimonial-carousel-nav {
 	text-align: center;
@@ -41,7 +51,7 @@
 .services a:hover {
 	border-color: #A8A8BD;
 }
-.insight .elementor-shortcode, .testimonial-row, .career-shortcode .elementor-shortcode {
+#insight-container, .testimonial-row, #career-container, .insight.page .elementor-shortcode, .career-shortcode.page .elementor-shortcode {
 	display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 	gap: 20px;
@@ -101,6 +111,8 @@ a.elementor-button.elementor-button-link.elementor-size-sm {
 }
 .sec3 .services img {
 	border-radius: 10px;
+	width: -webkit-fill-available;
+    height: 50vh;
 }
 .col1-row1 img {
 	width: -webkit-fill-available;
